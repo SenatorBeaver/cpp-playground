@@ -44,7 +44,7 @@ namespace crtp
         public:
             float getProfit()
             {
-                auto &obj = static_cast<const Derived &>(*this);
+                const auto &obj = static_cast<const Derived &>(*this);
                 return 42.0 * obj.output / obj.input;
             }
         };
